@@ -6,9 +6,3 @@ $data = $this;
 echo '<pre>';
 print_r($arResult);
 echo '</pre>';
-
-foreach ($arResult as $item){
-	echo '<pre>';
-	print_r($item);
-	echo '</pre>';
-}
