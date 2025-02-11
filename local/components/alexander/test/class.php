@@ -2,6 +2,11 @@
 
 class Test extends CBitrixComponent
 {
+	/**
+	 * @param $params
+	 *
+	 * @return array
+	 */
 	public function onPrepareComponentParams($params)
 	{
 		foreach ($params['SELECT'] as &$item){
@@ -19,7 +24,7 @@ class Test extends CBitrixComponent
 	}
 
 	/**
-	 *
+	 * Получение элементов и тд
 	 * @return null|array
 	 */
 	public function getItems() : ?array
@@ -28,7 +33,6 @@ class Test extends CBitrixComponent
 		$test = \Bitrix\Iblock\Elements\ElementProductionTable::getList([
             'select' => $this->arParams['SELECT'],
 		                                                                ]);
-
 		return $test->fetchAll();
 	}
 }
